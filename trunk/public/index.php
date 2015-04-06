@@ -1,0 +1,7 @@
+<?php include('header.php'); ?>
+
+        <p>Hello world! This is HTML5 Boilerplate.</p>
+        
+        <i class="fa-5x fa fa-heart"></i>
+
+<?php include('footer.php'); ?>

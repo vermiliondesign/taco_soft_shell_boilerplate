@@ -14,14 +14,3 @@
         <link rel="stylesheet" href="_/css/main.css">
     </head>
     <body>
-
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        
-        <i class="fa-5x fa fa-heart"></i>
-        
-        <script src="_/lib/jquery/jquery-2.1.1.min.js"></script>
-        
-        <script src="_/js/main.js"></script>
-
-    </body>
-</html>
