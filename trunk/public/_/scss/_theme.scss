@@ -1,6 +1,7 @@
 // sticky the footer at the bottom if content not long enough
 html, body {
   height: 100%;
+  background: green;
 }
 
 // utility theme classes
@@ -37,3 +38,5 @@ div:not(.content) > ul {
 a.cta {
 
 }
+
+

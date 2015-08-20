@@ -1,25 +1,22 @@
-
+/*
+ * Vermilion Gruntfile
+ * http://vermilion.com
+ */
+ 
+'use strict';
+ 
+/**
+ * Grunt Module
+ */
 module.exports = function(grunt) {
  
 // Project configuration.
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
-
-  compass: {
-    dev: {
-      options: {
-        /* Either use your config.rb for settings, or state them here */
-        //config: 'config.rb'
-        httpPath:"/",
-        sassDir:"_/scss",
-        cssDir:"_/css",
-        imagesDir:"_/img/build",
-        javascriptsDir:"_/js",
-        fontsDir:"_/fonts",
-        outputStyle:"expanded",
-        noLineComments:false,
-        relativeAssets:true,
-        raw: "preferred_syntax = :sass\n"
+  sass: {
+    dist: {
+      files: {
+        '_/css/main.css' : '_/scss/main.scss'
       }
     }
   },
@@ -36,7 +33,7 @@ grunt.initConfig({
     },
     styles: {
       files: ['_/scss/*.scss'],
-      tasks: ['compass'],
+      tasks: ['sass'],
       options: {
         spawn: false,
         livereload: true,
@@ -46,12 +43,12 @@ grunt.initConfig({
 });
  
 // Load plugins here
-grunt.loadNpmTasks('grunt-contrib-compass');
+grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
 
  
 // Default task(s).
-grunt.registerTask('default', ['compass']);
+grunt.registerTask('default', ['sass']);
 grunt.registerTask('dev', ['watch']);
  
 };
